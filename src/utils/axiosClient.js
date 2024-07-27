@@ -2,11 +2,11 @@ import axios from 'axios';
 import {toast} from "react-toastify";
 
 const apiUrl = process.env.REACT_APP_API_URL;
-const axiosInstance = axios.create({
+const axiosClient = axios.create({
   baseURL: `${apiUrl}/api/auth`,
 });
 
-axiosInstance.interceptors.request.use(
+axiosClient.interceptors.request.use(
   (config) => {
     const user = JSON.parse(localStorage.getItem('user'));
     const accessToken = user ? user.token : null;
@@ -19,7 +19,7 @@ axiosInstance.interceptors.request.use(
     return Promise.reject(error);
   }
 );
-axiosInstance.interceptors.response.use(
+axiosClient.interceptors.response.use(
   (response) => {
     return response;
   },
