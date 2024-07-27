@@ -1,11 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "!./src/pages/**/*",
+    "./src/ui/**/*.{js,ts,jsx,tsx}", // Include only files in the src/ui directory
   ],
   corePlugins: {
-    preflight: false, // Tắt các CSS mặc định
+    preflight: false, // Disable default CSS
   },
   darkMode: 'class',
   theme: {
@@ -13,4 +12,3 @@ module.exports = {
   },
   plugins: [],
 }
-
