@@ -38,4 +38,4 @@ axiosClient.interceptors.response.use(
   }
 );
 
-export default axiosInstance;
+export default axiosClient;
