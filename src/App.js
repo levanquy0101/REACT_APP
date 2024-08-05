@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import routes from './routes/routes';
+import routes from './routes';
 import PrivateRoute from './utils/PrivateRoute';
 import './assets/styles/global.scss';
 //Thư viện tạo hiệu ứng 
